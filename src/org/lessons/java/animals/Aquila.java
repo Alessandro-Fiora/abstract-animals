@@ -1,6 +1,8 @@
 package org.lessons.java.animals;
 
-public class Aquila extends AbstractAnimale {
+import org.lessons.java.animals.interfaces.Flying;
+
+public class Aquila extends AbstractAnimale implements Flying {
 
     public Aquila(String nome, int eta) {
         super(nome, eta);
@@ -14,6 +16,11 @@ public class Aquila extends AbstractAnimale {
     @Override
     public void mangia() {
         System.out.println("Sto mangiando topi");
+    }
+
+    @Override
+    public void vola() {
+        System.out.println("Sto volando!");
     }
 
 }
